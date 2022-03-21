@@ -30,6 +30,9 @@ app.use('/', index)
 const movies = require('./routes/movies')
 app.use('/movies', movies)
 
+const movie = require('./routes/movie')
+app.use('/movie', movie)
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app)
 

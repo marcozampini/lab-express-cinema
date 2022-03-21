@@ -1,0 +1,21 @@
+{{#with movie}}
+  <picture>
+    <img src='{{image}}' alt='Image of {{title}}' />
+  </picture>
+  <article class='description'>
+    <a class='back' href='../movies/'>Go back</a>
+    <h2>{{title}}</h2>
+    <p>{{director}}</p>
+    <ul>
+      {{#each stars as |star|}}
+        <li>{{star}}</li>
+      {{/each}}
+    </ul>
+    <p>{{description}}</p>
+    <p>
+      {{#each showtimes as |showtime|}}
+        {{showtime}}
+        |
+      {{/each}}</p>
+  </article>
+{{/with}}
